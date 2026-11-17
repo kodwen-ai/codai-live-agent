@@ -1,0 +1,61 @@
+{
+  "name": "@kodwen/live-agent",
+  "version": "0.2.1",
+  "description": "Live co-host runtime for streams on the codai AI gateway - scorer, token bucket, reply queue (approve/skip/edit/auto), triage, streaming responder, moderation and memory hooks, coach suggestions.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "keywords": [
+    "codai",
+    "ai",
+    "llm",
+    "live",
+    "livestream",
+    "co-host",
+    "chat",
+    "openai-compatible"
+  ],
+  "homepage": "https://kodwen.com",
+  "bugs": "https://github.com/kodwen-ai/codai-live-agent/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kodwen-ai/codai-live-agent.git"
+  },
+  "scripts": {
+    "lint": "echo 'lint runs in the codai monorepo'",
+    "typecheck": "tsc --noEmit",
+    "build": "tsdown",
+    "test": "vitest run",
+    "clean": "rm -rf .turbo dist"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "tsdown": "^0.23.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5",
+    "@types/node": "^24.19.1"
+  }
+}
